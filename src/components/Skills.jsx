@@ -2,7 +2,6 @@ import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 
 function Skills() {
-  // Safety check: if skills is missing, use an empty object so it doesn't crash
   const skills = portfolioData.skills || {};
 
   return (

@@ -34,7 +34,7 @@ function Navbar() {
           
           {/* Safe GitHub Icon Button (Raw SVG to prevent crashes) */}
           <a 
-            href="https://github.com/yourusername" 
+            href="https://github.com/199Benji" 
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 border border-accent/30 text-accent rounded hover:bg-accent/10 transition-all duration-300"
@@ -79,7 +79,7 @@ function Navbar() {
               </a>
             ))}
             <a 
-              href="https://github.com/yourusername" 
+              href="https://github.com/199Benji" 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-accent font-medium py-2"
