@@ -3,7 +3,7 @@ export const portfolioData = {
     name: "Miracle Benjamin",
     tag: "Software Engineer",
     headline: "I'm Miracle Benjamin.",
-    subheadline: "Full-Stack Developer specializing in React, FastAPI, and Django.",
+    subheadline: "Full-Stack Developer specializing in React, and Django.",
     bioPrefix: "I build secure, scalable web apps and ",
     bioHighlight: "ML-powered solutions",
     bioSuffix: ". Currently engineering software at Korlink Technologies.",
