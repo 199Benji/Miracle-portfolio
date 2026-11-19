@@ -1,7 +1,22 @@
-import { portfolioData } from '../data/portfolioData';
+import { useState, useEffect } from 'react';
+import { client, urlFor } from '../sanityClient';
 
 function Hero() {
-  const { hero } = portfolioData;
+  const [hero, setHero] = useState(null);
+
+  useEffect(() => {
+    client.fetch('*[_type == "portfolio"][0]').then((doc) => {
+      if (!doc) return;
+      setHero({
+        ...doc,
+        // Transform Sanity references into plain URLs so the JSX below stays identical
+        profileImage: doc.profileImage ? urlFor(doc.profileImage).url() : null,
+        cvLink: doc.cvFile?.asset ? urlFor(doc.cvFile).url() : null,
+      });
+    });
+  }, []);
+
+  if (!hero) return <div className="min-h-screen flex items-center justify-center text-accent">Loading...</div>;
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-6 md:px-12 py-20">
